@@ -1,31 +1,27 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ComingSoon, PageHero } from "@/components/PageBits";
+import { ComingSoon } from "@/components/ComingSoon";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact ARC Studio — Islamabad, Pakistan" },
+      { title: "Contact — ARC Studio | Coming Soon" },
       {
         name: "description",
         content:
-          "Talk to ARC Studio about your project. Call or WhatsApp +92 300 0037272 or email info@buildarcstudio.com. Full contact page coming soon.",
+          "The ARC Studio contact page is coming soon.",
       },
-      { property: "og:title", content: "Contact ARC Studio" },
-      { property: "og:description", content: "Call or WhatsApp +92 300 0037272 to start your project." },
+      { property: "og:title", content: "Contact ARC Studio — Coming Soon" },
+      {
+        property: "og:description",
+        content: "The ARC Studio contact page is coming soon.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: ContactPage,
 });
 
 function ContactPage() {
-  return (
-    <>
-      <PageHero
-        eyebrow="Contact"
-        title="Coming Soon"
-        intro="Our enquiry form and office details are being prepared."
-      />
-      <ComingSoon note="You can still reach us today — phone, WhatsApp and email are listed at the bottom of the home page." />
-    </>
-  );
+  return <ComingSoon page="Contact" />;
 }

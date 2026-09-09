@@ -43,25 +43,25 @@
 }
 
 :root {
-  --radius: 0.25rem;
-  --background: oklch(8% 0 0);
+  --radius: 0.2rem;
+  --background: oklch(5% 0 0);
   --foreground: oklch(98% 0 0);
-  --card: oklch(13% 0 0);
+  --card: oklch(9% 0 0);
   --card-foreground: oklch(98% 0 0);
-  --popover: oklch(13% 0 0);
+  --popover: oklch(9% 0 0);
   --popover-foreground: oklch(98% 0 0);
   --primary: oklch(98% 0 0);
-  --primary-foreground: oklch(8% 0 0);
-  --secondary: oklch(20% 0 0);
+  --primary-foreground: oklch(5% 0 0);
+  --secondary: oklch(18% 0 0);
   --secondary-foreground: oklch(98% 0 0);
-  --muted: oklch(20% 0 0);
+  --muted: oklch(18% 0 0);
   --muted-foreground: oklch(70% 0 0);
-  --accent: oklch(88% 0 0);
-  --accent-foreground: oklch(8% 0 0);
+  --accent: oklch(82% 0 0);
+  --accent-foreground: oklch(5% 0 0);
   --destructive: oklch(60% 0.22 25);
-  --destructive-foreground: oklch(98% 0 0);
-  --border: oklch(100% 0 0 / 0.14);
-  --input: oklch(100% 0 0 / 0.18);
+  --destructive-foreground: oklch(98% 0.005 80);
+  --border: oklch(100% 0 0 / 0.1);
+  --input: oklch(100% 0 0 / 0.14);
   --ring: oklch(98% 0 0);
 }
 
@@ -344,7 +344,10 @@
   color: var(--color-primary);
 }
 @utility ember-text {
-  color: var(--color-foreground);
+  background: linear-gradient(135deg, var(--foreground), var(--muted-foreground));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 @utility hairline { border-top: 1px solid var(--color-border) }
 

@@ -1,31 +1,27 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ComingSoon, PageHero } from "@/components/PageBits";
+import { ComingSoon } from "@/components/ComingSoon";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About ARC Studio — Architecture, Build & Interiors" },
+      { title: "About — ARC Studio | Coming Soon" },
       {
         name: "description",
         content:
-          "ARC Studio by M.M Associates is a team of architects, designers and builders creating timeless spaces across Pakistan. Full page coming soon.",
+          "The ARC Studio about page is coming soon.",
       },
-      { property: "og:title", content: "About ARC Studio" },
-      { property: "og:description", content: "Design with purpose. Build with integrity." },
+      { property: "og:title", content: "About ARC Studio — Coming Soon" },
+      {
+        property: "og:description",
+        content: "The ARC Studio about page is coming soon.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: AboutPage,
 });
 
 function AboutPage() {
-  return (
-    <>
-      <PageHero
-        eyebrow="About"
-        title="Coming Soon"
-        intro="Our full studio story, team and philosophy will be here shortly."
-      />
-      <ComingSoon note="In the meantime, you can read a short introduction to ARC Studio on the home page." />
-    </>
-  );
+  return <ComingSoon page="About" />;
 }
