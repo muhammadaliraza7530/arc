@@ -1,5 +1,3 @@
-import logoAsset from "@/assets/arc-studio-logo.jpeg.asset.json";
-
 /**
  * Single source of truth for all site content.
  * Every media file lives in /public and is referenced with an absolute path,
@@ -7,7 +5,7 @@ import logoAsset from "@/assets/arc-studio-logo.jpeg.asset.json";
  */
 
 export const img = {
-  logo: logoAsset.url,
+  logo: "/logo.jpeg",
 
   // Photoreal hero / feature photography
   spanishVilla: "/homes/hero-spanish.jpg",
@@ -31,16 +29,16 @@ export const site = {
   fullName: "ARC Studio by M.M Associates",
   tagline: "Architecture · Build · Interiors",
   logo: img.logo,
-  address: "DHA Phase 6, Lahore, Punjab, Pakistan",
-  addressShort: "New Super Town, Lahore",
-  email: "aspiringtalks@gmail.com",
-  phone: "0306 0221896",
-  phoneTel: "+923060221896",
-  facebook: "https://facebook.com/AspiringHomes",
-  instagram: "https://instagram.com/aspiringhomesofficial",
-  youtube: "https://youtube.com/@AspiringHomes",
+  address: "Islamabad, Pakistan",
+  addressShort: "Islamabad, Pakistan",
+  email: "info@buildarcstudio.com",
+  phone: "+92 300 0037272",
+  phoneTel: "+923000037272",
+  facebook: "https://facebook.com",
+  instagram: "https://instagram.com",
+  youtube: "https://youtube.com",
   whatsapp:
-    "https://wa.me/923060221896?text=Hello%20Aspiring%20Homes%2C%20I%20would%20like%20to%20discuss%20a%20construction%20project.",
+    "https://wa.me/923000037272?text=Hello%20ARC%20Studio%2C%20I%20would%20like%20to%20discuss%20a%20project.",
   hours: [
     { day: "Monday to Thursday", time: "9am to 7pm" },
     { day: "Friday", time: "9am to 12pm & 3pm to 7pm" },
@@ -59,9 +57,8 @@ export const navLinks = [
 
 export const heroSlides = [
   {
-    title: "We design and build the home you keep imagining",
-    highlight:
-      "Architecture, interiors and full construction — planned, drawn and executed by one team from concept to handover.",
+    title: "Designed with purpose. Built to last.",
+    highlight: "Spaces that feel like home — where thoughtful design meets a better way of living.",
     image: img.luxuryVilla,
   },
   {
@@ -92,30 +89,76 @@ export const stats = [
 
 /** Branded social posts — shown full-frame, never cropped. */
 export const posts = [
-  { image: "/posts/post-1.jpg", title: "Modern Facade Residence", location: "Sialkot", tag: "Coming Soon" },
-  { image: "/posts/post-2.jpg", title: "Crafting Classic Beauty", location: "Lahore", tag: "In Progress" },
-  { image: "/posts/post-3.jpg", title: "Concept to Creation", location: "Lahore", tag: "In Progress" },
-  { image: "/posts/post-4.jpg", title: "Classical Grand Residence", location: "Faisalabad", tag: "Coming Soon" },
-  { image: "/posts/post-5.jpg", title: "Classic Villa Handover", location: "Lahore", tag: "Completed" },
-  { image: "/posts/post-6.jpg", title: "Building Dreams", location: "Lahore", tag: "Under Construction" },
-  { image: "/posts/post-7.jpg", title: "Constructing Excellence", location: "Lahore", tag: "Under Construction" },
-  { image: "/posts/post-8.jpg", title: "The Reflection — Night", location: "Sialkot", tag: "Coming Soon" },
-  { image: "/posts/post-9.jpg", title: "The Reflection — Duplex", location: "Sialkot", tag: "Coming Soon" },
+  {
+    image: "/posts/post-1.jpeg",
+    title: "Modern Facade Residence",
+    location: "Sialkot",
+    tag: "Coming Soon",
+  },
+  {
+    image: "/posts/post-2.jpeg",
+    title: "Crafting Classic Beauty",
+    location: "Lahore",
+    tag: "In Progress",
+  },
+  {
+    image: "/posts/post-3.jpeg",
+    title: "Concept to Creation",
+    location: "Lahore",
+    tag: "In Progress",
+  },
+  {
+    image: "/posts/post-4.jpeg",
+    title: "Classical Grand Residence",
+    location: "Faisalabad",
+    tag: "Coming Soon",
+  },
+  {
+    image: "/posts/post-5.jpeg",
+    title: "Classic Villa Handover",
+    location: "Lahore",
+    tag: "Completed",
+  },
+  {
+    image: "/posts/post-6.jpeg",
+    title: "Building Dreams",
+    location: "Lahore",
+    tag: "Under Construction",
+  },
 ];
 
 export const videoGallery = [
-  { src: "/videogrally/video1.mp4", poster: img.luxuryVilla, title: "Project Showreel", caption: "Design to handover" },
-  { src: "/videogrally/video2.mp4", poster: img.spanishVilla, title: "Spanish Villa Walkthrough", caption: "Elevation study" },
-  { src: "/videogrally/video3.mp4", poster: img.luxuryHouse, title: "Site Progress Film", caption: "Grey structure" },
-  { src: "/videogrally/video4.mp4", poster: img.courtyard, title: "Interior Reveal", caption: "Finishing stage" },
+  {
+    src: "/videogrally/video1.mp4",
+    poster: img.luxuryVilla,
+    title: "Project Showreel",
+    caption: "Design to handover",
+  },
+  {
+    src: "/videogrally/video2.mp4",
+    poster: img.spanishVilla,
+    title: "Spanish Villa Walkthrough",
+    caption: "Elevation study",
+  },
+  {
+    src: "/videogrally/video3.mp4",
+    poster: img.luxuryHouse,
+    title: "Site Progress Film",
+    caption: "Grey structure",
+  },
+  {
+    src: "/videogrally/video4.mp4",
+    poster: img.courtyard,
+    title: "Interior Reveal",
+    caption: "Finishing stage",
+  },
 ];
 
 export const testimonials = [
   {
-    name: "Ahmed Raza",
-    role: "Homeowner · DHA Phase 6, Lahore",
-    quote:
-      "They handled drawings, material and labour themselves. I never had to chase three different people — the house looks exactly like the 3D they showed me.",
+    name: "Client Name",
+    role: "ARC Studio Client",
+    quote: "ARC Studio turned our house into a home. Professional, creative, and reliable.",
   },
   {
     name: "Sana Iqbal",
@@ -146,21 +189,21 @@ export const testimonials = [
 export const services = [
   {
     slug: "architecture",
-    title: "Architecture Design",
+    title: "Architectural Design",
     image: img.luxuryHouse,
     short: "2D planning, 3D elevation design and complete working drawings for your plot.",
     body: "2D planning, 3D elevation design and complete working drawings tailored to your plot size and family needs. Every drawing is developed until you approve each detail, so nothing is left to guesswork on site.",
   },
   {
     slug: "construction",
-    title: "Construction",
+    title: "Construction & Build",
     image: img.brickFront,
     short: "Grey structure and finishing packages with quality material and trained labour.",
     body: "Grey structure and finishing packages with quality material, trained labour and transparent site reporting. Our own supervised crews cast columns, beams and slabs strictly to the approved drawings.",
   },
   {
     slug: "interior",
-    title: "Interior Design",
+    title: "Interior Design & Execution",
     image: img.greyClassic,
     short: "Living, bedroom, kitchen and ceiling design with lighting and furniture detail.",
     body: "Living, bedroom, kitchen and ceiling design with lighting layouts, furniture detail and execution — designed and installed by the same team that built your structure.",
@@ -188,6 +231,19 @@ export const services = [
   },
 ];
 
+export const reasons = [
+  { title: "Purpose-Driven Design", body: "Every space is designed around how you live and work." },
+  {
+    title: "Quality Craftsmanship",
+    body: "We use premium materials and trusted contractors. Built to last.",
+  },
+  { title: "Transparent Process", body: "Clear timelines, clear budgets, zero surprises." },
+  {
+    title: "One-Stop Solution",
+    body: "Design, approvals, construction, and interiors — all under one roof.",
+  },
+];
+
 export const registrations = [
   "Lahore",
   "Faisalabad",
@@ -198,10 +254,26 @@ export const registrations = [
 ];
 
 export const process = [
-  { step: "01", title: "Consultation", body: "We discuss your plot, budget and requirements — in person or on WhatsApp." },
-  { step: "02", title: "Design", body: "Floor plans and 3D elevations are developed until you approve every detail." },
-  { step: "03", title: "Execution", body: "Grey structure and finishing delivered by our own supervised site teams." },
-  { step: "04", title: "Handover", body: "Final finishing, cleaning and a walk-through before your keys are handed over." },
+  {
+    step: "01",
+    title: "Consultation",
+    body: "We discuss your plot, budget and requirements — in person or on WhatsApp.",
+  },
+  {
+    step: "02",
+    title: "Design",
+    body: "Floor plans and 3D elevations are developed until you approve every detail.",
+  },
+  {
+    step: "03",
+    title: "Execution",
+    body: "Grey structure and finishing delivered by our own supervised site teams.",
+  },
+  {
+    step: "04",
+    title: "Handover",
+    body: "Final finishing, cleaning and a walk-through before your keys are handed over.",
+  },
 ];
 
 export const galleryImages = [

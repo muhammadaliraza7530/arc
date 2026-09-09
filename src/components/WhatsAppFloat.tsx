@@ -6,7 +6,7 @@ export function WhatsAppFloat() {
       href={site.whatsapp}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat with Aspiring Homes on WhatsApp"
+      aria-label="Chat with ARC Studio on WhatsApp"
       className="animate-wa-shake fixed bottom-6 right-5 z-50 inline-flex size-14 items-center justify-center rounded-full border border-primary bg-primary text-primary-foreground shadow-[0_10px_30px_rgba(242,103,34,0.35)] transition-transform hover:scale-105"
     >
       <svg viewBox="0 0 24 24" className="size-7 fill-current" aria-hidden="true">

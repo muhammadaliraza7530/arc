@@ -1,12 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Phone } from "lucide-react";
 import { useEffect, useState } from "react";
-import { heroSlides, process, services, site, stats, showreelUrl, img } from "@/lib/site-data";
+import { heroSlides, process, reasons, services, site, stats } from "@/lib/site-data";
 import { projects } from "@/lib/site";
 import { Counter, Reveal, SectionHeading } from "@/components/ui-bits";
 import { AutoScroller } from "@/components/AutoScroller";
-import { VideoPlayer } from "@/components/VideoPlayer";
-import { VideoGallery } from "@/components/VideoGallery";
 import { PostsRail } from "@/components/PostsRail";
 import { TestimonialsRail } from "@/components/Testimonials";
 import { CtaBand } from "@/components/PageBits";
@@ -94,7 +92,10 @@ function Hero() {
         >
           {slide.title}
         </h1>
-        <p key={slide.highlight} className="animate-rise-in mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-gray-300 sm:text-base">
+        <p
+          key={slide.highlight}
+          className="animate-rise-in mx-auto mt-5 max-w-2xl text-sm leading-relaxed text-gray-300 sm:text-base"
+        >
           {slide.highlight}
         </p>
 
@@ -103,7 +104,7 @@ function Hero() {
             to="/projects"
             className="btn-shake sheen-on-hover inline-flex items-center gap-2 rounded-full bg-primary px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-accent"
           >
-            View our work <ArrowRight className="size-4" />
+            View Our Work <ArrowRight className="size-4" />
           </Link>
           <a
             href={site.whatsapp}
@@ -111,7 +112,7 @@ function Hero() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-primary/60 px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
           >
-            <Phone className="size-4" /> WhatsApp us
+            <Phone className="size-4" /> Start Your Project
           </a>
         </div>
 
@@ -138,7 +139,7 @@ function HomePage() {
     <>
       <Hero />
 
-      {/* Showreel */}
+      {/*
       <section className="relative py-16 lg:py-24">
         <div className="mx-auto max-w-6xl px-5 lg:px-8">
           <SectionHeading
@@ -149,6 +150,30 @@ function HomePage() {
           />
           <Reveal className="mt-10">
             <VideoPlayer src={showreelUrl} poster={img.luxuryVilla} />
+          </Reveal>
+        </div>
+      </section>
+      */}
+
+      <section className="border-y border-border bg-card/30 py-20 lg:py-28">
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
+          <SectionHeading
+            eyebrow="Architecture • Build • Interiors"
+            title="Spaces that work better, feel better, and last longer."
+          />
+          <Reveal className="max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+            <p>
+              At ARC Studio, we believe great spaces do more than look beautiful. They work better,
+              feel better, and last longer.
+            </p>
+            <p className="mt-5">
+              We are a team of architects, designers, and builders dedicated to creating timeless
+              residential and commercial spaces across Pakistan. From the first sketch to the final
+              brick, we handle every detail with precision, honesty, and care.
+            </p>
+            <p className="mt-5 font-semibold text-foreground">
+              Design with purpose. Build with integrity.
+            </p>
           </Reveal>
         </div>
       </section>
@@ -173,22 +198,24 @@ function HomePage() {
           <SectionHeading
             eyebrow="What we do"
             title="Design, construction and finishing under one roof"
-            intro="One accountable team from the first sketch to the last light fitting."
+            intro="From concept to installation, one accountable team brings your space to life."
           />
           <div className="mt-12">
             <AutoScroller speed={180}>
               {services.map((s, i) => (
                 <Reveal key={s.slug} delay={i * 80} className="h-full">
                   <article className="lit-panel flex h-full w-[280px] shrink-0 flex-col overflow-hidden bg-card sm:w-[360px]">
-                    <img 
-                      src={s.image} 
-                      alt={s.title} 
-                      loading="lazy" 
-                      className="aspect-16/10 w-full shrink-0 object-cover" 
+                    <img
+                      src={s.image}
+                      alt={s.title}
+                      loading="lazy"
+                      className="aspect-16/10 w-full shrink-0 object-cover"
                     />
                     <div className="flex flex-col p-5 sm:p-6">
                       <h3 className="text-base font-bold sm:text-lg">{s.title}</h3>
-                      <p className="mt-2 text-xs leading-relaxed text-muted-foreground sm:text-sm">{s.short}</p>
+                      <p className="mt-2 text-xs leading-relaxed text-muted-foreground sm:text-sm">
+                        {s.short}
+                      </p>
                     </div>
                   </article>
                 </Reveal>
@@ -198,13 +225,31 @@ function HomePage() {
         </div>
       </section>
 
+      <section className="py-20 lg:py-28">
+        <div className="mx-auto max-w-7xl px-5 lg:px-8">
+          <SectionHeading eyebrow="Why ARC Studio" title="A better way to build" />
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {reasons.map((reason, i) => (
+              <Reveal key={reason.title} delay={i * 80}>
+                <article className="lit-panel h-full bg-card p-6">
+                  <h3 className="text-lg font-bold">{reason.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {reason.body}
+                  </p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Project Rail Section (Bottom space fixed) */}
       <section className="overflow-hidden border-y border-border bg-card/30 py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <SectionHeading
-            eyebrow="Our projects"
-            title="Villas, Spanish homes and modern residences"
-            intro="Drag with finger to scroll manually, or let it auto-play."
+            eyebrow="Our work"
+            title="Every project is a story"
+            intro="Explore homes, offices, and spaces we have brought to life."
           />
         </div>
         <div className="mt-12">
@@ -224,26 +269,15 @@ function HomePage() {
                   className="aspect-4/3 w-full shrink-0 object-cover"
                 />
                 <div className="flex flex-col p-5">
-                  <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">{p.status}</span>
+                  <span className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">
+                    {p.status}
+                  </span>
                   <h3 className="mt-1.5 text-base font-bold">{p.title}</h3>
                   <p className="mt-1 text-xs text-muted-foreground">{p.location}</p>
                 </div>
               </Link>
             ))}
           </AutoScroller>
-        </div>
-      </section>
-
-      {/* Video gallery */}
-      <section className="py-20 lg:py-28">
-        <div className="mx-auto max-w-6xl px-5 lg:px-8">
-          <SectionHeading
-            eyebrow="Video gallery"
-            title="Four films from our sites"
-            intro="Tap any frame to play — starting one clip stops the others."
-            align="center"
-          />
-          <VideoGallery />
         </div>
       </section>
 

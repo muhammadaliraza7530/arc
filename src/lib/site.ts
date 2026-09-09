@@ -1,24 +1,29 @@
-import { img, showreelUrl as reelUrl, process as processSteps, services as serviceList } from "@/lib/site-data";
+import {
+  img,
+  showreelUrl as reelUrl,
+  process as processSteps,
+  services as serviceList,
+} from "@/lib/site-data";
 
 export const logoUrl = img.logo;
 export const showreelUrl = reelUrl;
 
 export const company = {
   name: "ARC Studio",
-  tagline: "Architecture · Interior · Construction",
+  tagline: "Architecture · Build · Interiors",
   since: "Architecture, Build & Interiors",
-  phoneDisplay: "0306 0221896",
-  phoneTel: "+923060221896",
+  phoneDisplay: "+92 300 0037272",
+  phoneTel: "+923000037272",
   whatsapp:
-    "https://wa.me/923060221896?text=Hello%20Aspiring%20Homes%2C%20I%20would%20like%20to%20discuss%20a%20construction%20project.",
-  email: "aspiringtalks@gmail.com",
-  addressShort: "New Super Town, Lahore",
-  address: "DHA Phase 6, Lahore, Punjab, Pakistan",
+    "https://wa.me/923000037272?text=Hello%20ARC%20Studio%2C%20I%20would%20like%20to%20discuss%20a%20project.",
+  email: "info@buildarcstudio.com",
+  addressShort: "Islamabad, Pakistan",
+  address: "Islamabad, Pakistan",
   hours: "Mon–Sat, 9am to 7pm",
   socials: [
-    { label: "Instagram", href: "https://instagram.com/aspiringhomesofficial" },
-    { label: "Facebook", href: "https://facebook.com/AspiringHomes" },
-    { label: "YouTube", href: "https://youtube.com/@AspiringHomes" },
+    { label: "Instagram", href: "https://instagram.com" },
+    { label: "Facebook", href: "https://facebook.com" },
+    { label: "YouTube", href: "https://youtube.com" },
   ],
 };
 
